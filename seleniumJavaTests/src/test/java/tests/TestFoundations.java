@@ -11,6 +11,7 @@ public class TestFoundations {
 
     public WebDriver driver;
 
+
     @BeforeMethod
     public void prepareDriver(){
         DriverFactory driverFactory = DriverFactoryProvider.getDriverFactory("chrome");
