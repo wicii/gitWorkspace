@@ -1,5 +1,6 @@
 package navigation;
 
+import logger.LogManager;
 import org.openqa.selenium.WebDriver;
 
 public class PageNavigation {
@@ -11,6 +12,7 @@ public class PageNavigation {
     }
 
     public void navigateToPage(String pageURL){
+        LogManager.info("Opening" + pageURL);
         driver.navigate().to(pageURL);
     }
 }

@@ -12,7 +12,6 @@ class DriverPaths {
                 return "webdriver.firefox.driver";
 
             default : throw new IllegalArgumentException();
-
         }
     }
 

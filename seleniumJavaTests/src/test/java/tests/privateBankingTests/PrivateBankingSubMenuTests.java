@@ -1,10 +1,11 @@
-package tests;
+package tests.privateBankingTests;
 
 import navigation.PageNavigation;
 import org.testng.annotations.Test;
+import tests.TestFoundations;
 import urls.AppURLs;
 
-public class PrivateBankingPageTests extends TestFoundations {
+public class PrivateBankingSubMenuTests extends TestFoundations {
 
     @Test
     public void privateBankingTests(){
