@@ -9,8 +9,4 @@ public class MainPageObject {
     public MainPageObject(WebDriver driver){
         this.driver = driver;
     }
-
-    public void navigateToPage(String pageURL) throws InterruptedException {
-        driver.navigate().to(pageURL);
-    }
 }

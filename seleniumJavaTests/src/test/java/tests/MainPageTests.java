@@ -1,5 +1,6 @@
 package tests;
 
+import navigation.PageNavigation;
 import org.testng.annotations.Test;
 import pages.MainPageObject;
 import urls.AppURLs;
@@ -7,8 +8,9 @@ import urls.AppURLs;
 public class MainPageTests extends TestFoundations {
 
     @Test
-    public void mainPageTest() throws InterruptedException {
+    public void mainPageTest(){
         MainPageObject mainPage = new MainPageObject(driver);
-        mainPage.navigateToPage(AppURLs.getMainPageURL());
+        PageNavigation navigateTo = new PageNavigation(driver);
+        navigateTo.navigateToPage(AppURLs.getMainPageURL());
     }
 }
