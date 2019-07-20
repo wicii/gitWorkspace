@@ -24,12 +24,14 @@ public class WaitForWebElement {
     }
 
     public void waitForElementToBeClickable(WebElement webElement){
-        WebDriverWait webDriverWait = getWebDriverWait();
+        WebDriverWait webDriverWait;
+        webDriverWait = getWebDriverWait();
         webDriverWait.until(ExpectedConditions.elementToBeClickable(webElement));
     }
 
     public void waitForElementToBeInvisible(WebElement webElement){
-        WebDriverWait webDriverWait = getWebDriverWait();
+        WebDriverWait webDriverWait;
+        webDriverWait = getWebDriverWait();
         webDriverWait.until(ExpectedConditions.invisibilityOf(webElement));
     }
 }

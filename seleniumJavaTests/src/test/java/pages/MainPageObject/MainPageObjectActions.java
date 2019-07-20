@@ -47,4 +47,31 @@ public class MainPageObjectActions {
             LogManager.info("Hovered over : "+ element.getText());
         }
     }
+
+    public void asUserIWantToOpenPageSearch(){
+        waitForWebElement.waitForElementToBeClickable(mainPageObjectElements.getSearchButton());
+        mainPageObjectElements.getSearchButton().click();
+        Assert.assertTrue(mainPageObjectElements.getSearchForm().isDisplayed());
+    }
+
+    public void performSearchOnMainPage(String text){
+        LogManager.info("User performs search on main page with " + text +" word.");
+        waitForWebElement.waitForElementToBeClickable(mainPageObjectElements.getSearchForm());
+        mainPageObjectElements.getSearchForm().sendKeys(text);
+        Assert.assertTrue(mainPageObjectElements.getSearchForm().isDisplayed());
+
+        for (WebElement element: mainPageObjectElements.getSearchResults()) {
+            LogManager.info("Input text: " + text + ", search result: " + element.getText());
+            if(!element.getText().toLowerCase().contains(text.toLowerCase())){
+                Assert.assertFalse(true);
+            }
+        }
+    }
+
+    public void closeSearchForm(){
+        LogManager.info("User closes search form.");
+        javascriptExecutor.executeScript("arguments[0].click();",mainPageObjectElements.getCloseSearchFormButton());
+        waitForWebElement.waitForElementToBeInvisible(mainPageObjectElements.getSearchForm());
+        Assert.assertFalse(mainPageObjectElements.getSearchForm().isDisplayed());
+    }
 }

@@ -31,6 +31,18 @@ public class MainPageObjectElements {
     @FindBy (xpath = "//span[contains(text(),\"Wybierz konto osobiste\")]")
     private WebElement privateAccountsPageTitle;
 
+    @FindBy(xpath = "//a[@title=\"Szukaj w serwisie\"]")
+    private WebElement openSearchFormButton;
+
+    @FindBy(xpath = "//input[@title=\"Czego szukasz?\"]")
+    private WebElement searchForm;
+
+    @FindBy(xpath = "//div[@id=\"output\"]//div")
+    private List<WebElement> searchResults;
+
+    @FindBy(xpath = "//button//span[\"Zamknij wyszukiwarkę\"]")
+    private WebElement closeSearchForm;
+
     public WebElement getAccountButton(){
         return accountDropDownButton;
     }
@@ -49,5 +61,21 @@ public class MainPageObjectElements {
 
     public WebElement getPrivateAccountsPageTitle(){
         return privateAccountsPageTitle;
+    }
+
+    public WebElement getSearchButton(){
+        return openSearchFormButton;
+    }
+
+    public WebElement getSearchForm(){
+        return searchForm;
+    }
+
+    public List<WebElement> getSearchResults(){
+        return searchResults;
+    }
+
+    public WebElement getCloseSearchFormButton(){
+        return closeSearchForm;
     }
 }
