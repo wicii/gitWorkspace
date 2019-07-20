@@ -2,6 +2,7 @@ package tests.mainPageTests;
 
 import logger.LogManager;
 import navigation.PageNavigation;
+import org.apache.log4j.Logger;
 import org.testng.annotations.Test;
 import pages.MainPageObject.MainPageObjectActions;
 import tests.TestFoundations;
@@ -20,7 +21,17 @@ public class SubMenuTests extends TestFoundations {
     }
 
     @Test
-    public void displayDropDownOptionsOnAccountsButton(){
+    public void displayDropDownOptionsOnEachSubmenuDropDownButton(){
+        MainPageObjectActions mainPageObjectActions = new MainPageObjectActions(driver);
+        PageNavigation pageNavigation = new PageNavigation(driver);
+
+        LogManager.startTestCase("User is redirected after clicking on Accuonts button");
+        pageNavigation.navigateToPage(AppURLs.getMainPageURL());
+        mainPageObjectActions.hoverOverEachSubMenuDropdownButton();
+    }
+
+    @Test
+    public void displayDropDownOnAccountsButton(){
         MainPageObjectActions mainPageObjectActions = new MainPageObjectActions(driver);
         PageNavigation pageNavigation = new PageNavigation(driver);
 
