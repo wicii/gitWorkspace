@@ -2,7 +2,6 @@ package tests.mainPageTests;
 
 import logger.LogManager;
 import navigation.PageNavigation;
-import org.apache.log4j.Logger;
 import org.testng.annotations.Test;
 import pages.MainPageObject.MainPageObjectActions;
 import tests.TestFoundations;
@@ -15,9 +14,10 @@ public class SubMenuTests extends TestFoundations {
         MainPageObjectActions mainPageObjectActions = new MainPageObjectActions(driver);
         PageNavigation pageNavigation = new PageNavigation(driver);
 
-        LogManager.startTestCase("User is redirected after clicking on Accuonts button");
+        LogManager.startTestCase("User is redirected after clicking on Personal Accuonts button");
         pageNavigation.navigateToPage(AppURLs.getMainPageURL());
-        mainPageObjectActions.clickAccountsButtonOnMainPage();
+        mainPageObjectActions.clickOnPersonalAccountsButtonOnMainPage();
+        LogManager.endTestCase();
     }
 
     @Test
@@ -25,9 +25,10 @@ public class SubMenuTests extends TestFoundations {
         MainPageObjectActions mainPageObjectActions = new MainPageObjectActions(driver);
         PageNavigation pageNavigation = new PageNavigation(driver);
 
-        LogManager.startTestCase("User is redirected after clicking on Accuonts button");
+        LogManager.startTestCase("User sees all options in dropdown from submenus");
         pageNavigation.navigateToPage(AppURLs.getMainPageURL());
         mainPageObjectActions.hoverOverEachSubMenuDropdownButton();
+        LogManager.endTestCase();
     }
 
     @Test
@@ -38,5 +39,6 @@ public class SubMenuTests extends TestFoundations {
         LogManager.startTestCase("User is redirected after clicking on Accuonts button");
         pageNavigation.navigateToPage(AppURLs.getMainPageURL());
         mainPageObjectActions.hoverOverAccountsButtonOnMainPage();
+        LogManager.endTestCase();
     }
 }

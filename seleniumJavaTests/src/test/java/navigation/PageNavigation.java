@@ -12,7 +12,7 @@ public class PageNavigation {
     }
 
     public void navigateToPage(String pageURL){
-        LogManager.info("Opening" + pageURL);
+        LogManager.info("Opening " + pageURL);
         driver.navigate().to(pageURL);
     }
 }

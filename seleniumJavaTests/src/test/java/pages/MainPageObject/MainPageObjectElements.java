@@ -17,13 +17,19 @@ public class MainPageObjectElements {
     }
 
     @FindBy(xpath = "//ul[@class=\"submenu\"]//a[text()=\"Konta\"]")
-    private WebElement accountDropDownButton;
+    private static WebElement accountDropDownButton;
 
     @FindBy(xpath = "//ul[@class=\"submenu\"]//a[text()=\"Kredyty\"]")
     private WebElement creditsDropDownButton;
 
     @FindBy(xpath = "//ul[@class=\"submenu\"]//li[@class=\"dropdown\"]")
-    public List<WebElement> dropdownSubMenuElements;
+    private List<WebElement> dropdownSubMenuElements;
+
+    @FindBy(xpath = "//a[@href=\"/indywidualny/konta/konta-osobiste/\"]")
+    private WebElement personalAccountsButton;
+
+    @FindBy (xpath = "//span[contains(text(),\"Wybierz konto osobiste\")]")
+    private WebElement privateAccountsPageTitle;
 
     public WebElement getAccountButton(){
         return accountDropDownButton;
@@ -35,5 +41,13 @@ public class MainPageObjectElements {
 
     public List<WebElement> getDropdownSubMenuElements(){
         return dropdownSubMenuElements;
+    }
+
+    public WebElement getPersonalAccountsButton(){
+        return personalAccountsButton;
+    }
+
+    public WebElement getPrivateAccountsPageTitle(){
+        return privateAccountsPageTitle;
     }
 }

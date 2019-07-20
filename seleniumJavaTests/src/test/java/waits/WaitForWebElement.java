@@ -18,7 +18,8 @@ public class WaitForWebElement {
     }
 
     public void waitForElementToBeVisible(WebElement webElement){
-        WebDriverWait webDriverWait = getWebDriverWait();
+        WebDriverWait webDriverWait;
+        webDriverWait = getWebDriverWait();
         webDriverWait.until(ExpectedConditions.visibilityOf(webElement));
     }
 
