@@ -4,6 +4,7 @@ import navigation.PageNavigation;
 import org.testng.annotations.Test;
 import pages.MainPageObject;
 import urls.AppURLs;
+import waits.WaitForWebElement;
 
 public class MainPageTests extends TestFoundations {
 
@@ -11,6 +12,8 @@ public class MainPageTests extends TestFoundations {
     public void mainPageTest(){
         MainPageObject mainPage = new MainPageObject(driver);
         PageNavigation navigateTo = new PageNavigation(driver);
+        WaitForWebElement waitForWebElement = new WaitForWebElement(driver);
         navigateTo.navigateToPage(AppURLs.getMainPageURL());
+
     }
 }
