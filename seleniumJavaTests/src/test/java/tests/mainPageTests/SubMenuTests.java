@@ -41,26 +41,4 @@ public class SubMenuTests extends TestFoundations {
         mainPageObjectActions.hoverOverAccountsButtonOnMainPage();
         LogManager.endTestCase();
     }
-
-    @Test
-    public void asUserIWantToSeeSearchResults(){
-        MainPageObjectActions mainPageObjectActions = new MainPageObjectActions(driver);
-        PageNavigation pageNavigation = new PageNavigation(driver);
-
-        LogManager.startTestCase("User sees search form");
-        pageNavigation.navigateToPage(AppURLs.getMainPageURL());
-        mainPageObjectActions.asUserIWantToOpenPageSearch();
-        mainPageObjectActions.performSearchOnMainPage("Kredyt");
-    }
-
-    @Test
-    public void asUserIWantToCloseSearchForm(){
-        MainPageObjectActions mainPageObjectActions = new MainPageObjectActions(driver);
-        PageNavigation pageNavigation = new PageNavigation(driver);
-        LogManager.startTestCase("User closes search form");
-        pageNavigation.navigateToPage(AppURLs.getMainPageURL());
-        mainPageObjectActions.asUserIWantToOpenPageSearch();
-
-        mainPageObjectActions.closeSearchForm();
-    }
 }

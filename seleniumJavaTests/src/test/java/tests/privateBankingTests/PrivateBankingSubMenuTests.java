@@ -10,6 +10,6 @@ public class PrivateBankingSubMenuTests extends TestFoundations {
     @Test
     public void privateBankingTests(){
         PageNavigation pageNavigation = new PageNavigation(driver);
-        pageNavigation.navigateToPage(AppURLs.getPrivetBankingPage());
+        pageNavigation.navigateToPage(AppURLs.getPrivetBankingPageUrl());
     }
 }

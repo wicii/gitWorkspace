@@ -47,10 +47,6 @@ public class MainPageObjectElements {
         return accountDropDownButton;
     }
 
-    public WebElement getCreditsButton(){
-        return creditsDropDownButton;
-    }
-
     public List<WebElement> getDropdownSubMenuElements(){
         return dropdownSubMenuElements;
     }
