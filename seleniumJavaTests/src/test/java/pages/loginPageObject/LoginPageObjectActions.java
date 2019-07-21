@@ -21,12 +21,12 @@ public class LoginPageObjectActions extends ObjectPageFoundation {
     }
 
     public void putUserNameIntoLoginForm(String username){
-        LogManager.info("User puts his id into login form");
+        LogManager.info("User puts "+username+" into login field");
         loginPageObjectElements.getUserName().sendKeys(username);
     }
 
     public void putUserPasswordIntoLoginForm(String password){
-        LogManager.info("User puts his password into login form");
+        LogManager.info("User puts "+ password+" into password field");
         loginPageObjectElements.getUserPassword().sendKeys(password);
     }
 
