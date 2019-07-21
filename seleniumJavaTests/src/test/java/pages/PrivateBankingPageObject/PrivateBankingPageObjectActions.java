@@ -1,13 +1,12 @@
 package pages.PrivateBankingPageObject;
 
 import org.openqa.selenium.WebDriver;
+import pages.ObjectPageFoundation;
 import waits.WaitForWebElement;
 
-public class PrivateBankingPageObjectActions {
+public class PrivateBankingPageObjectActions extends ObjectPageFoundation {
 
-    private WebDriver driver;
     private PrivateBankingPageObjectElements privateBankingPageObjectElements;
-    private WaitForWebElement waitForWebElement;
 
     public PrivateBankingPageObjectActions(WebDriver driver){
         this.driver = driver;

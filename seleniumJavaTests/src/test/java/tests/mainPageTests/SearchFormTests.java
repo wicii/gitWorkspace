@@ -16,7 +16,7 @@ public class SearchFormTests extends TestFoundations {
 
         LogManager.startTestCase("User sees search form");
         pageNavigation.navigateToPage(AppURLs.getMainPageURL());
-        mainPageObjectActions.asUserIWantToOpenPageSearch();
+        mainPageObjectActions.openSearchForm();
         mainPageObjectActions.performSearchOnMainPage("Kredyt");
     }
 
@@ -27,7 +27,7 @@ public class SearchFormTests extends TestFoundations {
 
         LogManager.startTestCase("User closes search form");
         pageNavigation.navigateToPage(AppURLs.getMainPageURL());
-        mainPageObjectActions.asUserIWantToOpenPageSearch();
+        mainPageObjectActions.openSearchForm();
         mainPageObjectActions.closeSearchForm();
     }
 }

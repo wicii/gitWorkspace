@@ -43,6 +43,12 @@ public class MainPageObjectElements {
     @FindBy(xpath = "//button//span[\"Zamknij wyszukiwarkę\"]")
     private WebElement closeSearchForm;
 
+    @FindBy(css = "#log-in")
+    private WebElement logInButton;
+
+    @FindBy(xpath = "//form[@id=\"loginForm\"]")
+    private WebElement logInForm;
+
     public WebElement getAccountButton(){
         return accountDropDownButton;
     }
@@ -73,5 +79,13 @@ public class MainPageObjectElements {
 
     public WebElement getCloseSearchFormButton(){
         return closeSearchForm;
+    }
+
+    public WebElement getLogInButton(){
+        return logInButton;
+    }
+
+    public WebElement getLoginForm(){
+        return logInForm;
     }
 }

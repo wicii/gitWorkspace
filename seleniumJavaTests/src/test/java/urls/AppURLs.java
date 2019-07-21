@@ -11,7 +11,7 @@ public class AppURLs {
         return "https://www.mbank.pl/private-banking/";
     }
 
-    public static String getLoginPageUrl(){
+    public static String getPrivateAccountsLoginPage(){
         return "https://online.mbank.pl/pl/Login";
     }
 }
