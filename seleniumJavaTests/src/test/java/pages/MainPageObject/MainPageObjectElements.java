@@ -7,12 +7,9 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class MainPageObjectElements {
+class MainPageObjectElements {
 
-    private WebDriver driver;
-
-    public MainPageObjectElements(WebDriver driver){
-        this.driver = driver;
+    MainPageObjectElements(WebDriver driver){
         PageFactory.initElements(driver, this);
     }
 
@@ -49,43 +46,43 @@ public class MainPageObjectElements {
     @FindBy(xpath = "//form[@id=\"loginForm\"]")
     private WebElement logInForm;
 
-    public WebElement getAccountButton(){
+    WebElement getAccountButton(){
         return accountDropDownButton;
     }
 
-    public List<WebElement> getDropdownSubMenuElements(){
+    List<WebElement> getDropdownSubMenuElements(){
         return dropdownSubMenuElements;
     }
 
-    public WebElement getPersonalAccountsButton(){
+    WebElement getPersonalAccountsButton(){
         return personalAccountsButton;
     }
 
-    public WebElement getPrivateAccountsPageTitle(){
+    WebElement getPrivateAccountsPageTitle(){
         return privateAccountsPageTitle;
     }
 
-    public WebElement getSearchButton(){
+    WebElement getSearchButton(){
         return openSearchFormButton;
     }
 
-    public WebElement getSearchForm(){
+    WebElement getSearchForm(){
         return searchForm;
     }
 
-    public List<WebElement> getSearchResults(){
+    List<WebElement> getSearchResults(){
         return searchResults;
     }
 
-    public WebElement getCloseSearchFormButton(){
+    WebElement getCloseSearchFormButton(){
         return closeSearchForm;
     }
 
-    public WebElement getLogInButton(){
+    WebElement getLogInButton(){
         return logInButton;
     }
 
-    public WebElement getLoginForm(){
+    WebElement getLoginForm(){
         return logInForm;
     }
 }

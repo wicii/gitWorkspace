@@ -1,6 +1,5 @@
 package urls;
 
-
 public class AppURLs {
 
     public static String getMainPageURL(){
