@@ -14,7 +14,7 @@ public class WaitForWebElement {
     }
 
     private WebDriverWait getWebDriverWait() {
-        return new WebDriverWait(driver,10);
+        return new WebDriverWait(driver,15);
     }
 
     public void waitForElementToBeVisible(WebElement webElement){

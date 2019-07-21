@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="run all tests">
+
+    <test name="menu tests">
+        <classes>
+            <class name="tests.mainPageTests.MenuTests"/>
+        </classes>
+    </test>
+    <test name="submenu menu">
+        <classes>
+            <class name="tests.mainPageTests.SubMenuTests"/>
+        </classes>
+    </test>
+    <test name="search form">
+        <parameter name="keyWord" value="Kredyt"></parameter>
+        <classes>
+            <class name="tests.mainPageTests.SearchFormTests"/>
+        </classes>
+    </test>
+
+    <test name="User Login for private banking page">
+        <parameter name="tooShortUsername" value="abc"></parameter>
+        <parameter name="tooShortUserPassword" value="1a2"></parameter>
+        <parameter name="invalidUsername" value="fakeUserName"></parameter>
+        <parameter name="invalidUserPassword" value="fakeUserPassword"></parameter>
+        <classes>
+            <class name="tests.loginPageTests.UserLoginTests"/>
+        </classes>
+    </test>
+</suite>

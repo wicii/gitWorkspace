@@ -58,7 +58,6 @@ public class MainPageObjectActions extends ObjectPageFoundation {
     public void closeSearchForm(){
         LogManager.info("User closes search form.");
         javascriptExecutor.executeScript("arguments[0].click();",mainPageObjectElements.getCloseSearchFormButton());
-        waitForWebElement.waitForElementToBeInvisible(mainPageObjectElements.getSearchForm());
         Assert.assertFalse(mainPageObjectElements.getSearchForm().isDisplayed());
     }
 
